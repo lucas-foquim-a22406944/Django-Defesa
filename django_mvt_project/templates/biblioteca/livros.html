@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Livros</title></head>
+<body>
+  <h1>Livros</h1>
+  <ul>
+    {% for livro in livros %}
+      <li>{{ livro.titulo }} — {{ livro.autor.nome }}</li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'lista_autores' %}">Ver Autores</a>
+</body>
+</html>

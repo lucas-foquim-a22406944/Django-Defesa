@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Produtos</title></head>
+<body>
+  <h1>Produtos</h1>
+  {% for cat in categorias %}
+    <h2>{{ cat.nome }}</h2>
+    <ul>
+      {% for p in cat.produto_set.all %}
+        <li>{{ p.nome }} — {{ p.preco }}€</li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+</body>
+</html>

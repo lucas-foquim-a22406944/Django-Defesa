@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>{{ curso.idioma }}</title></head>
+<body>
+  <h1>{{ curso.idioma }}</h1>
+  <p>Professor: {{ curso.professor.nome }}</p>
+  <h2>Estudantes</h2>
+  <ul>
+    {% for e in estudantes %}
+      <li>{{ e.nome }}</li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'lista_cursos' %}">Voltar</a>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head><title>Cursos</title></head>
+<body>
+  <h1>Cursos de Idiomas</h1>
+  <ul>
+    {% for curso in cursos %}
+      <li><a href="{% url 'detalhe_curso' curso.id %}">{{ curso.idioma }}</a> — Prof. {{ curso.professor.nome }}</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

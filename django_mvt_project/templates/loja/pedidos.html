@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Pedidos</title></head>
+<body>
+  <h1>Pedidos de {{ cliente.nome }}</h1>
+  {% for pedido in pedidos %}
+    <h3>{{ pedido.data }}</h3>
+    <ul>
+      {% for item in pedido.itempedido_set.all %}
+        <li>{{ item.produto.nome }} x{{ item.quantidade }}</li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+</body>
+</html>
